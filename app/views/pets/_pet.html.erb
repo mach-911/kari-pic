@@ -1,0 +1,23 @@
+<div id="<%= dom_id pet %>">
+<div class="col-3">
+ <div class="card">
+    <% if pet.images.any? %>
+      <%= image_tag pet.images.first, class: 'card-img-top' %>
+    <% end %>
+   <div class="card-body">
+     <div class="owner-avatar">
+      <% if pet.user.images.any? %>
+       <%= image_tag pet.user.images[0].url, class: 'rounded-circle w-100' %>
+      <% end %>
+     </div>
+     <h5 class="card-title"><%= pet.name %></h5>
+     <p class="card-text">
+       <strong>Raza:</strong><%= pet.race%><br>
+       <strong>Edad:</strong><%= pet.age %><br>
+       <strong>Género:</strong><%= pet.gender %>
+     </p>
+   </div>
+ </div>
+</div>
+
+</div>
